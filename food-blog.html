@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food Blog</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      /*Header starts*/
+      header {
+        display: flex;
+        justify-content: space-between;
+      }
+      header h2 {
+        margin: 0;
+        font-size: 16px;
+      }
+      /*Header ends*/
+
+      /*Items section starts*/
+      #items {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .item {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .item > h5 {
+        margin: 4px 0;
+        text-align: center;
+      }
+
+      .item > p {
+        margin: 12px 0;
+        text-align: center;
+      }
+
+      .item > img {
+        width: 100%;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .pagination > button {
+        border: none;
+        background: none;
+      }
+
+      .pagination > button.active {
+        background-color: #333;
+        color: white;
+      }
+      /*Items section ends*/
+
+      /*About section starts*/
+      #about {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #about img {
+        max-width: 60%;
+      }
+      /*About section ends*/
+
+      hr {
+        margin: 80px 0;
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+      }
+
+      /*Footer section starts*/
+      footer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      footer > div {
+        width: 33.34%;
+      }
+
+      .post {
+        display: flex;
+      }
+
+      .post img {
+        width: 30%;
+        padding: 8px;
+      }
+
+      .post > div {
+        width: 70%;
+        padding: 8px;
+      }
+
+      .post > div > p {
+        margin: 8px 0;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .tags > a {
+        background: grey;
+        text-decoration: none;
+        color: white;
+        margin: 2px;
+        width: auto;
+        padding: 0 4px;
+      }
+
+      .tags a:hover {
+        background-color: black;
+      }
+      /*Footer section ends*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="https://placehold.it/20x20" />
+      </div>
+      <div>
+        <h2>My Food</h2>
+      </div>
+      <div>
+        <h2>Mail</h2>
+      </div>
+    </header>
+    <section id="items">
+      <div class="items">
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+        <div class="item">
+          <img src="https://placehold.it/240x240" />
+          <h5>Item Name</h5>
+          <p>This is a item with some text</p>
+        </div>
+      </div>
+      <div class="pagination">
+        <button><<</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>>></button>
+      </div>
+    </section>
+    <section id="about">
+      <h4>About me, The Food Man</h4>
+      <img src="https://placehold.it/480x320" />
+      <h4>I am Who I Am!</h4>
+      <p><i>With Passion For Real, Good Food</i></p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </section>
+    <hr />
+    <footer>
+      <div>
+        <h4>FOOTER</h4>
+        <p>
+          centuries, but also the leap into electronic typesetting, remaining
+          essentially unchanged. It was popularised in the 1960s with the
+          release of Letraset sheets containing Lorem Ipsum passages, and more
+          recently with desktop
+        </p>
+        <p>Powered by <a href="#">w3.css</a></p>
+      </div>
+      <div>
+        <h4>BLOG POSTS</h4>
+        <div class="blog-posts">
+          <div class="post">
+            <img src="https://placehold.it/30x30" />
+            <div>
+              <p>Lorem</p>
+              <p>Sed maths Science</p>
+            </div>
+          </div>
+          <div class="post">
+            <img src="https://placehold.it/30x30" />
+            <div>
+              <p>Ipsum</p>
+              <p>Sed maths Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>POPULAR TAGS</h4>
+        <div class="tags">
+          <a href="#">Travel</a>
+          <a href="#">New York</a>
+          <a href="#">Flowers</a>
+          <a href="#">Flowers</a>
+          <a href="#">Flowers</a>
+          <a href="#">Flowers</a>
+          <a href="#">Flowers</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
