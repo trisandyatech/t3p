@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Facebook | Jyothi Babu Araja</title>
+  <style>
+    /*Global Styles*/
+button {
+  height: 36px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+#profile {
+  border-bottom: 2px solid #ccc;
+  padding: 40px 0;
+  max-width: 1250px;
+}
+
+#cover {
+  max-width: 1250px;
+  background: url(https://scontent-pnq1-2.xx.fbcdn.net/v/t1.6435-9/74800937_1297458703758378_1302719806293671936_n.jpg?stp=dst-jpg_p180x540&_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=pxs5vAnBd-kAX9P8eI5&_nc_ht=scontent-pnq1-2.xx&oh=00_AfBnpS_0wpymslPTKPr_31FAwJEnw1OSGtS_815rhHI7zQ&oe=64EB0686);
+  height: 462px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#cover button {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+#about {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+}
+
+#about > div {
+  display: flex;
+}
+
+.dp {
+  width: 15%;
+  position: relative;
+}
+
+.dp img {
+  border-radius: 50%;
+  position: absolute;
+  top: -24px;
+}
+
+.name-friends {
+  width: 55%;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.name-friends h2 {
+  margin: 12px 0;
+}
+
+.name-friends p {
+  margin: 4px 0;
+  color: #777;
+}
+
+.edit {
+  width: 30%;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.add-to-story {
+  background: #2374E1;
+  color: white;
+}
+
+.friends {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.friends img {
+  border-radius: 50%;
+  margin-right: -8px;
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+<section id="profile">
+  <div id="cover">
+    <button>Edit cover photo</button>
+  </div>
+  <div id="about">
+    <div class="dp">
+      <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t1.6435-1/89479372_1432637190240528_7301545592629493760_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=VZ8Sf-VDqOAAX8C_fAA&_nc_ht=scontent-pnq1-2.xx&oh=00_AfCQ-7s0oWenI8TkMfwNaYUIGle0JQrUbz06omZRFpUgkw&oe=64EB1C18" />
+    </div>
+    <div class="name-friends">
+      <h2>Jyothi Babu Araja</h2>
+      <p>2.1 K Friends</p>
+      <div class="friends">
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+        <img src="https://scontent-pnq1-2.xx.fbcdn.net/v/t39.30808-1/357693795_3212363005729059_6727423971992919470_n.jpg?stp=cp0_dst-jpg_p32x32&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=kywOUbTIEqYAX_Lxcfm&_nc_ht=scontent-pnq1-2.xx&oh=00_AfB2uCE7C1KgwGwOembNd2dsh4vBe58eNfHb46TyzMa2fw&oe=64C81919" />
+      </div>
+    </div>
+        <div class="edit">
+          <button class="add-to-story">Add to Story</button>
+                    <button>Edit Profile</button>
+                    <button>^</button>
+        </div>
+  </div>
+</section>
+</body>
+</html>
