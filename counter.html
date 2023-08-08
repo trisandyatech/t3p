@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+
+      function displayCounterApp() {
+        let counter = 0;
+        // Subtract Button
+        const subButton = document.createElement("button");
+        subButton.innerHTML = "-";
+        root.appendChild(subButton);
+        subButton.addEventListener("click", function () {
+          counter -= 1;
+          displayElement.innerHTML = counter;
+        });
+
+        // Display element
+        const displayElement = document.createElement("p");
+        root.appendChild(displayElement);
+
+        // Add Button
+        const addButton = document.createElement("button");
+        addButton.innerHTML = "+";
+        root.appendChild(addButton);
+        addButton.addEventListener("click", function () {
+          counter += 1;
+          displayElement.innerHTML = counter;
+        });
+      }
+
+      const showCounterAppButton = document.createElement("button");
+      showCounterAppButton.innerHTML = "Show Counter App";
+      root.appendChild(showCounterAppButton);
+      const onMouseEnterHandler = function () {
+        displayCounterApp();
+        showCounterAppButton.removeEventListener(
+          "mouseenter",
+          onMouseEnterHandler
+        );
+      };
+      showCounterAppButton.addEventListener("mouseenter", onMouseEnterHandler);
+    </script>
+  </body>
+</html>
