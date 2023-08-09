@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        min-width: 30px;
+        display: inline-block;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+
+      // function printPattern(size) {
+      //   const n = 2 * size - 1;
+      //   for (let i = 1; i <= n; i++) {
+      //     const p = document.createElement("p");
+      //     for (let j = 1; j <= n; j++) {
+      //       const span = document.createElement("span");
+      //       let value = Math.min(i, j);
+      //       span.innerHTML = value;
+      //       p.appendChild(span);
+      //     }
+      //     root.appendChild(p);
+      //   }
+      // }
+
+      function createSpan(value) {
+        const span = document.createElement("span");
+        span.innerHTML = value;
+        return span;
+      }
+
+      function printPattern2(size) {
+        const n = 2 * size - 1;
+        for (let i = 1; i <= n; i++) {
+          let j = (i > size ? size - (i % size) : i) || size;
+          const p = document.createElement("p");
+          let k = 1;
+
+          // Increment
+          while (k <= j) {
+            p.appendChild(createSpan(k));
+            k++;
+          }
+
+          // Equal values
+          while (k <= n - j) {
+            p.appendChild(createSpan(j));
+            k++;
+          }
+
+          k = Math.min(j, size - 1);
+          // Decrement
+          while (k >= 1) {
+            p.appendChild(createSpan(k));
+            k--;
+          }
+
+          root.appendChild(p);
+        }
+      }
+
+      printPattern2(4);
+    </script>
+  </body>
+</html>
