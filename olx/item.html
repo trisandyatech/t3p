@@ -36,7 +36,7 @@
     </header>
 
     <div id="content-wrapper" class="mui--text-center">
-      <div id="items"></div>
+      <div id="item"></div>
     </div>
 
     <footer>
@@ -48,25 +48,19 @@
     <script src="js/items.js"></script>
     <script>
       function onLoad(event) {
-        const logoutEl = document.querySelector("#logout");
-        const singInEl = document.querySelector("#sign-in");
-        const user = sessionStorage.getItem("user");
-        if (user) {
-          // If user logged in
+        const itemEl = document.querySelector("#item");
 
-          const userObject = JSON.parse(user);
-          logoutEl.innerHTML = userObject.name + " (Logout)";
-          logoutEl.style.display = "block";
-          singInEl.style.display = "none";
-        } else {
-          // if not logged in
-          singInEl.style.display = "block";
-        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = Number(urlParams.get("id")); // 7
+
+        const item = MOCK_ITEMS[itemId];
+
+        const itemDiv = createItem(item, itemId);
+
+        itemEl.appendChild(itemDiv);
       }
 
       onLoad();
-
-      addItems();
     </script>
   </body>
 </html>
