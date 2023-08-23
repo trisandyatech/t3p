@@ -1,75 +1,67 @@
-const MOCK_ITEMS = [
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 5,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 10,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 20,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 30,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 40,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 50,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 60,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 70,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 80,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-  {
-    image: "https://placehold.it/280X150",
-    name: "IPhone 11 Pro Ultra Max",
-    price: 90,
-    location: "Pedakallepalli, Mopidevi",
-    postedDate: "20-08-2023",
-  },
-];
+const MOCK_ITEMS = [];
+
+class Image {
+  address;
+  width = 150;
+  height = 100;
+  constructor(address) {
+    this.address = address;
+  }
+
+  setWidth = (width) => {
+    this.width = width;
+  };
+
+  getWidth = () => this.width;
+
+  setHeight = (height) => {
+    this.height = height;
+  };
+}
+
+class OlxItem {
+  id;
+  name;
+  price;
+  image;
+  location;
+  postedDate;
+  postedBy;
+
+  constructor(name, price, image, location, postedBy, postedDate) {
+    this.id = Math.random();
+    this.name = name;
+    this.price = price;
+    this.image = new Image(image);
+    this.location = location;
+    this.postedBy = postedBy;
+    this.postedDate = postedDate;
+  }
+
+  updatePrice = (newPrice) => {
+    this.price = newPrice;
+  };
+}
+
+for (let i = 0; i < 100; i++) {
+  MOCK_ITEMS.push(
+    new OlxItem(
+      "Dell XPS " + (i + 1),
+      70000,
+      "https://m.media-amazon.com/images/I/51oRDX42M2L._SX300_SY300_QL70_FMwebp_.jpg",
+      "Pedakallepalli",
+      "Jyothi Babu Araja",
+      new Date()
+    )
+  );
+}
+
+MOCK_ITEMS[2].updatePrice(50000);
+
+MOCK_ITEMS[2].image.setWidth(200);
+MOCK_ITEMS[2].image.setHeight(150);
+
+console.log(MOCK_ITEMS);
 
 function addItems(event) {
   const root = document.getElementById("items");
@@ -89,7 +81,9 @@ function createItem(item, i) {
   div.appendChild(anchor);
 
   const img = document.createElement("img");
-  img.setAttribute("src", item.image);
+  img.setAttribute("src", item.image.address);
+  img.style.width = item.image.getWidth() + "px";
+  img.style.height = item.image.height + "px";
 
   const price = document.createElement("p");
   price.innerHTML = item.price;
@@ -102,4 +96,10 @@ function createItem(item, i) {
 
   anchor.append(img, price, name, location);
   return div;
+}
+
+function itemView(item, i) {
+  const pageview = document.createElement("div");
+  preview.classList.add("page");
+  //const wrap = document.
 }
